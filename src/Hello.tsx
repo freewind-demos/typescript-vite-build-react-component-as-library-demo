@@ -1,10 +1,12 @@
-import  { FC } from 'react';
-import './Hello.pcss';
+import { FC } from 'react';
+import './Hello.css';
 
-type Props = {};
+type Props = {
+  name: string;
+}
 
-export const Hello: FC<Props> = ({}) => {
+export const Hello: FC<Props> = ({ name }) => {
   return <div className={'Hello'}>
-    <h1>Hello React</h1>
+    <h1>Hello {name}!</h1>
   </div>;
 }
